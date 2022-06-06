@@ -1,0 +1,367 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:300");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+body {
+  font-family: "Roboto";
+  font-size: 18px;
+}
+header {
+  position: relative;
+  width: 100%;
+  background-color: #000000;
+}
+header nav {
+  display: flex;
+  padding: 0 20px;
+  margin: 0 auto;
+  max-width: 1180px;
+  height: 70px;
+  line-height: 70px;
+
+}
+@media (min-width: 768px) {
+  header nav {
+    justify-content: center;
+  }
+}
+@media (min-width: 1200px) {
+  header nav {
+    padding: 0;
+    justify-content: center;
+  }
+}
+header nav #collapsible-menu-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 15px;
+  background-image: url("../images/icon_collapsible-menu.svg");
+}
+@media (min-width: 768px) {
+  header nav #collapsible-menu-button {
+    display: none;
+  }
+}
+header nav ul {
+  display: none;
+  list-style-type: none;
+}
+@media (min-width: 768px) {
+  header nav ul {
+    display: flex;
+  }
+}
+header nav ul li {
+  margin: 0 20px;
+}
+header nav ul li:first-of-type {
+  margin-left: 0;
+}
+header nav ul li a {
+  color: #CCC;
+  text-decoration: none;
+}
+header nav ul li a:visited {
+  color: #CCC;
+}
+header nav ul li a:hover {
+  color: #FFF;
+}
+
+/*CORES DO SOBRE*/
+section:nth-of-type(even) {
+  background-color: gainsboro;
+  color: #333;
+}
+/*CORES DAS TELAS*/
+section:nth-of-type(odd) {
+  background-color: #333333F2;
+  color: gainsboro;
+}
+/*COR DO PAINEL PRINCIPAL*/
+section:first-of-type {
+  background-color: #333333F2;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.overlay li {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: url("../images/estacionamento.jpg") center;
+}
+.container {
+  max-width: 100%;
+  margin: auto;
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  .container {
+    width: 1180px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #hero {
+    padding: 200px 0;
+  }
+}
+.icon {
+  width: 200px;
+  height: 60px;
+}
+.icon-medium {
+  width: 96px;
+  height: 96px;
+}
+
+#name {
+  font-size: 42px;
+  font-weight: 700;
+}
+
+#description {
+  margin-bottom: 50px;
+  font-family: "Roboto Slab";
+  font-size: 22px;
+  font-weight: 100;
+  line-height: 1.5em;
+}
+
+.text-shadow {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+.box-shadow {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  box-shadow: 0 1px 5px #00000059;
+  
+}
+/*Titulo*/
+.headline {
+  font-size: 25px;
+}
+
+@media only screen and (min-width: 768px) {
+  #sobre-container {
+    margin: 50px 0;
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+  }
+}
+.sobre {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+@media only screen and (min-width: 768px) {
+  .sobre {
+    padding: 20px;
+  }
+}
+.sobre h3 {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+.sobre p {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 100;
+  line-height: 1.5em;
+}
+#citation {
+  font-size: 20px;
+  margin: 20px 0;
+}
+#linha{
+  border: 0;
+  border-left: 1px solid #333;
+  border-right: 1px solid #333;
+}
+@media only screen and (max-device-width: 900px) {
+  #linha{
+    border: 0;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+  }
+}
+.quadrado{
+  border: 0;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 25px;
+  padding-top: 25px;
+}
+/*Estilos da Tela*/
+.projects-container {
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom:20px;
+  display: grid;
+  grid-auto-rows: 230px;
+  grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+}
+@media only screen and (min-width: 768px) {
+  .projects-container {
+    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+  }
+}
+@media only screen and (min-width: 960px) {
+  .projects-container {
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+  }
+}
+.projects-container .project {
+  border: 1px solid #333;
+}
+.projects-container .project div {
+  width: 100%;
+  height: 100%;
+  padding: 25px;
+  background-color: #CCC;
+  list-style-type: none;
+  color: #333;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+.projects-container h1{
+  font-size: 15px;
+  text-align: center;
+}
+.projects-container p{
+  text-align: center;
+  padding-top: 5px;
+  font-size: 15px;
+  font-weight: bold;
+}
+.projects-container img{
+  width: 100%;
+  height: 100%;
+  padding-top: 5px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.projects-container .project div:hover {
+  opacity: 0.9;
+  
+}
+.projects-container .project:nth-of-type(1) {
+  background:url("../images/login.jpg") center no-repeat;
+  background-size: cover;
+}
+.projects-container .project:nth-of-type(2) {
+  background:url("../images/telaPrincipal.jpg") center no-repeat;
+  background-size: cover;
+}
+.projects-container .project:nth-of-type(3) {
+  background: url("../images/telaCliente.jpg") center no-repeat;
+  background-size: cover;
+}
+.projects-container .project:nth-of-type(4) {
+  background: url("../images/telaCaixa.jpg") center no-repeat;
+  background-size: cover;
+}
+.projects-container .project:nth-of-type(5) {
+  background: url("../images/telaPreco.jpg") center no-repeat;
+  background-size: cover;
+}
+.projects-container .project:nth-of-type(6) {
+  background: url("../images/telaGerencia.jpg") center no-repeat;
+  background-size: cover;
+}
+/*Estilos do Rodapé*/
+footer {
+  background-color: #000;
+  text-align: center;
+}
+footer #arrow-container {
+  box-sizing: content-box;
+  width: 35px;
+  height: 35px;
+  border-bottom: 2px solid #CCC;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  
+}
+footer #arrow-container svg {
+  transform: rotate(90deg);
+  background-color: #333;
+}
+footer #arrow-container svg polygon {
+  fill: #CCC;
+  transition: 0.25s;
+}
+footer #arrow-container:hover, footer #arrow-container:focus {
+  border-color: #FFF;
+}
+footer #arrow-container:hover svg polygon, footer #arrow-container:focus svg polygon {
+  fill: #FFF;
+}
+
+footer nav {
+  position: fixed;
+  top: 50px;
+  left: -200px;
+  width: 200px;
+  height: 100%;
+  background-color: black;
+  transition: 0.2s;
+}
+@media (min-width: 768px) {
+  footer nav {
+    display: none;
+  }
+}
+footer nav ul {
+  flex-direction: column;
+}
+footer nav ul li {
+  margin: 20px;
+  text-align: left;
+}
+footer nav ul li a {
+  color: #CCC;
+  text-decoration: none;
+}
+footer div {
+  display: flex;
+  justify-content: center;
+}
+footer div a {
+  display: block;
+  margin: 50px 10px;
+  font-size: 0;
+}
+.menu-active {
+  left: 0;
+}
+button {
+  height: 50px;
+  font-family: "Roboto";
+  font-size: 16px;
+  text-transform: uppercase;
+  transition: 0.2s;
+}
+button:hover {
+  cursor: pointer;
+
+}
